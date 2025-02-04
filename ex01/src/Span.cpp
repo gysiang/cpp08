@@ -6,11 +6,19 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:09:39 by gyong-si          #+#    #+#             */
-/*   Updated: 2025/02/04 14:11:51 by gyong-si         ###   ########.fr       */
+/*   Updated: 2025/02/04 14:30:04 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Span.hpp"
+
+Span::Span(unsigned int n) : max_size(n);
+
+void Span::addNumber(const int a)
+{
+    if (a.size() >= max_size)
+        throw SpanIsFull();
+}
 
 char const *Span::SpanIsFull::what(void) const throw() {
 	return ("Span is Full.");

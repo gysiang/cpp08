@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:09:07 by gyong-si          #+#    #+#             */
-/*   Updated: 2025/02/04 14:13:05 by gyong-si         ###   ########.fr       */
+/*   Updated: 2025/02/04 14:33:28 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 # define SPAN_HPP
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <stdexcept>
 
 class Span
 {
     public:
         Span(unsigned int n);
+        ~Span();
 
-        addNumber(const int a);
-        shortestSpan();
-        longestSpan();
+        void addNumber(const int a);
+        void shortestSpan();
+        void longestSpan();
 
         class SpanIsFull: public std::exception {
             public:
@@ -35,6 +39,7 @@ class Span
 		};
 
     private:
+        unsigned int max_size;
 }
 
 #endif
