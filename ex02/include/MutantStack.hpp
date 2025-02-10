@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 09:04:39 by gyong-si          #+#    #+#             */
-/*   Updated: 2025/02/08 16:32:09 by gyong-si         ###   ########.fr       */
+/*   Updated: 2025/02/10 09:16:48 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <iostream>
 #include <stack>
 #include <deque>
+#include <list>
+#include <vector>
 
 template <typename T>
 class MutantStack : public std::stack<T>
